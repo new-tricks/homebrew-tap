@@ -10,8 +10,8 @@
 class Newtricks < Formula
   desc "Design-time workbench for agent skills (search, customize, lint, publish)"
   homepage "https://github.com/new-tricks/tricks"
-  url "https://github.com/new-tricks/tricks/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "1d56051275f864632a2a9543a4404202c06d2ef5bbf40471d6ede532e3cba3e9"
+  url "https://github.com/new-tricks/tricks/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "a1743e259bb2a459e54acf6919eb594da2bf440d811d02823937a751b3ac37ac"
   license "Apache-2.0"
   head "https://github.com/new-tricks/tricks.git", branch: "main"
 

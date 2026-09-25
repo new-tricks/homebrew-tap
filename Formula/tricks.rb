@@ -1,17 +1,18 @@
 # typed: strict
 # frozen_string_literal: true
 
-# Formula for the new-tricks/homebrew-tap tap (Formula/newtricks.rb).
-#   brew install new-tricks/tap/newtricks
+# Formula for the new-tricks/homebrew-tap tap (Formula/tricks.rb; was newtricks until
+# 0.6, which the tap's formula_renames.json maps to it).
+#   brew install new-tricks/tap/tricks
 # This is the template: on each release, .github/workflows/release.yml renders it with
 # the tag's source tarball `url` and `sha256` (packaging/homebrew/render.sh) and pushes
 # it to the tap. Submit to homebrew-core once the project meets its notability
 # requirements.
-class Newtricks < Formula
+class Tricks < Formula
   desc "Design-time workbench for agent skills (search, customize, lint, publish)"
   homepage "https://github.com/new-tricks/tricks"
-  url "https://github.com/new-tricks/tricks/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "d0af5af29123d4b4d1f21a652f9014b5115824f4bb9e59438f3cb1800c081ed9"
+  url "https://github.com/new-tricks/tricks/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "ef536fe717065f1282d3aba4d585f6431cd022a4c4647053dfff395e4449a50b"
   license "Apache-2.0"
   head "https://github.com/new-tricks/tricks.git", branch: "main"
 
@@ -27,6 +28,6 @@ class Newtricks < Formula
     ENV["TRICKS_HOME"] = testpath
     ENV["TRICKS_CONFIG_DIR"] = testpath/"config"
     ENV["TRICKS_DATA_DIR"] = testpath/"data"
-    assert_match "no source repos yet", shell_output("#{bin}/tricks --offline status")
+    assert_match "no source repos yet", shell_output("#{bin}/tricks --offline list")
   end
 end
